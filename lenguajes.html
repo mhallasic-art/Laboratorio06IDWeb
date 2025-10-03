@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lenguajes - Preferencias</title>
+</head>
+<body>
+  <header>
+    <h1>Preferencias de Programación</h1>
+    <nav>
+      <a href="index.html">Inicio</a> |
+      <a href="registro.html">Registro</a> |
+      <a href="lenguajes.html">Lenguajes</a> |
+      <a href="validacion.html">Validación</a> |
+      <a href="cursos.html">Cursos</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <section>
+      <img src="assets/img/profile.jpg" alt="Foto de perfil" width="150" onerror="this.style.display='none'">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>¿Qué lenguajes conoces?</legend>
+          <label><input type="checkbox" name="lang" value="html"> HTML</label><br>
+          <label><input type="checkbox" name="lang" value="css"> CSS</label><br>
+          <label><input type="checkbox" name="lang" value="js"> JavaScript</label><br>
+          <label><input type="checkbox" name="lang" value="python"> Python</label><br>
+          <label><input type="checkbox" name="lang" value="java"> Java</label><br>
+        </fieldset>
+
+        <label for="horas">¿Cuántas horas de programación estudias al día?</label><br>
+        <input type="number" id="horas" name="horas" min="0" max="24" placeholder="Horas por día"><br><br>
+
+        <button type="submit">Guardar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p>© 2025 Misael</p>
+  </footer>
+</body>
+</html>
