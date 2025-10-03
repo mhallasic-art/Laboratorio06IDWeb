@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inscripción a Curso</title>
+</head>
+<body>
+  <header>
+    <h1>Formulario de Inscripción</h1>
+    <nav>
+      <a href="index.html">Inicio</a> |
+      <a href="registro.html">Registro</a> |
+      <a href="lenguajes.html">Lenguajes</a> |
+      <a href="validacion.html">Validación</a> |
+      <a href="cursos.html">Cursos</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="apellido">Apellido:</label><br>
+      <input type="text" id="apellido" name="apellido" required><br><br>
+
+      <label for="doc">Documento de identidad:</label><br>
+      <input type="text" id="doc" name="doc" required pattern="\d{6,12}" placeholder="Solo dígitos (6-12)"><br><br>
+
+      <label for="correo">Correo electrónico:</label><br>
+      <input type="email" id="correo" name="correo" required><br><br>
+
+      <label for="curso">Selecciona un curso:</label><br>
+      <select id="curso" name="curso" required>
+        <option value="">--Selecciona--</option>
+        <option value="web">Desarrollo Web Básico</option>
+        <option value="python">Programación en Python</option>
+        <option value="algoritmos">Algoritmos y Estructuras</option>
+      </select><br><br>
+
+      <fieldset>
+        <legend>Modalidad</legend>
+        <label><input type="radio" name="modalidad" value="presencial" required> Presencial</label><br>
+        <label><input type="radio" name="modalidad" value="virtual"> Virtual</label>
+      </fieldset><br>
+
+      <fieldset>
+        <legend>Horarios disponibles (elige uno o varios)</legend>
+        <label><input type="checkbox" name="horario" value="manana"> Mañana</label><br>
+        <label><input type="checkbox" name="horario" value="tarde"> Tarde</label><br>
+        <label><input type="checkbox" name="horario" value="noche"> Noche</label>
+      </fieldset><br>
+
+      <label for="coment">Comentarios adicionales:</label><br>
+      <textarea id="coment" name="coment" rows="4" cols="40" placeholder="Escribe aquí..."></textarea><br><br>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Restablecer</button>
+    </form>
+  </main>
+
+  <footer>
+    <hr>
+    <p>© 2025 Misael</p>
+  </footer>
+</body>
+</html>
