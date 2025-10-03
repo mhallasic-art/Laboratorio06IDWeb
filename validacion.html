@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Validación - Form</title>
+</head>
+<body>
+  <header>
+    <h1>Formulario con Validaciones</h1>
+    <nav>
+      <a href="index.html">Inicio</a> |
+      <a href="registro.html">Registro</a> |
+      <a href="lenguajes.html">Lenguajes</a> |
+      <a href="validacion.html">Validación</a> |
+      <a href="cursos.html">Cursos</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <form id="formValidacion" action="#" method="post">
+      <label for="correo">Correo (obligatorio):</label><br>
+      <input type="email" id="correo" name="correo" required placeholder="usuario@ejemplo.com"><br><br>
+
+      <label for="pass">Contraseña (6-12 caracteres):</label><br>
+      <!-- pattern: entre 6 y 12 caracteres (cualquier carácter excepto salto de línea) -->
+      <input type="password" id="pass" name="pass" required placeholder="6-12 caracteres" pattern=".{6,12}"><br><br>
+
+      <label for="pass2">Confirmar contraseña:</label><br>
+      <input type="password" id="pass2" name="pass2" required placeholder="Repite la contraseña"><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="msg" style="color: red;"></p>
+
+    <script>
+      document.getElementById('formValidacion').addEventListener('submit', function(e){
+        const p1 = document.getElementById('pass').value;
+        const p2 = document.getElementById('pass2').value;
+        const msg = document.getElementById('msg');
+        msg.textContent = '';
+
+        if (p1 !== p2) {
+          e.preventDefault();
+          msg.textContent = 'Las contraseñas no coinciden.';
+          return;
+        }
+        // el pattern y required ya se validan por HTML5 antes de llegar aquí
+        alert('Formulario válido. (aquí normalmente enviarías al servidor)');
+      });
+    </script>
+  </main>
+
+  <footer>
+    <hr>
+    <p>© 2025 Misael</p>
+  </footer>
+</body>
+</html>
